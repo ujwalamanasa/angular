@@ -1,0 +1,37 @@
+.rrrr{
+    width:500px;
+    height:auto;
+    vertical-align:right;
+    float:left;
+    text-align: bottom;
+    color:blue;
+    margin-left:450px;
+    margin-top:100px;
+    right:0;
+    left:0;
+    }
+    button[type="submit"]{
+    border-style:ridge;
+    width:450px;
+    height:40px
+    }
+    
+    input[type="text"]{
+    border-style:ridge;
+    width:450px;
+    height:40px;
+    
+    }
+    input[type="password"]{
+    border-style:ridge;
+    width:450px;
+    height:40px
+    }
+    input[type="email"]{
+    border-style:ridge;
+    width:450px;
+    height:40px
+    }
+   .ng-invalid.ng-touched{
+       border-color: red;
+   }

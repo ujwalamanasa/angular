@@ -1,0 +1,25 @@
+
+
+
+<form #f="ngForm" (ngSubmit)="onsubmit(f)">
+<div class="rrrr">
+<fieldset><legend>Register</legend>
+<br>
+<label>Username</label><br><input type="text"  placeholder="Username" name="username" required ngModel minlength="6" maxlength="10" #uname="ngModel"/>
+<span *ngIf="uname.touched && !uname.valid"> Enter a valid username (6-10) characters length.</span>
+<br><br><label>Email</label><br><input type="email"  placeholder="Email" email name="email" required ngModel #email="ngModel"/>
+<span *ngIf="!email.valid && email.touched">Enter a valid email</span>
+<br><br><label>Password</label><br><input type="password" placeholder="Password"  #password="ngModel" name="password" minlength="8" maxlength="15" required ngModel/>
+<span *ngIf="!password.valid && password.touched">Enter a valid password (8-15) characters length.</span>
+<br><br><label>Confirm Password</label><br><input type="password" placeholder="Confirm Password" rpassword="ngModel" name="renter-password" minlength="8" maxlength="15" required ngModel />
+<span *ngIf="!rpassword.valid && rpassword.touched">Enter a valid password (8-15) characters length.</span>
+<span *ngIf="rpassword.touched && password.value !== rpassword.value">Password mismatch.</span>
+<br><br><button type="submit" name="submit" [disabled]="!f.valid" >Register</button>
+</fieldset>
+
+ <!-- <span *ngIf= "#rpassword.touched && false">hi</span> -->
+
+</div>
+</form>
+
+
