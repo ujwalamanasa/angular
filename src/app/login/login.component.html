@@ -1,0 +1,17 @@
+<form [formGroup]="loginForm" (ngSubmit)="onsubmit()">
+    <div class="rrrr">
+        <fieldset><legend>Login</legend>
+          <br>
+      <label>Name:</label><br>
+      <input type="text" placeholder="Name" formControlName="uname" />
+  <br><br><label>Password:</label><br>
+  <input type="password" placeholder="password" formControlName="password"/>
+  <br>
+   <button type="submit" [disabled]="!loginForm.valid" >Login</button>
+   <div *ngIf=submitted&&validUser >Logged in successfully!</div>
+   <div *ngIf=submitted&&!validUser >Invalid user!</div>
+
+  </fieldset>  
+  </div>
+  </form>
+  <router-outlet></router-outlet>

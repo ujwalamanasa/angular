@@ -1,0 +1,24 @@
+<form [formGroup]="registerForm" (ngSubmit)="onsubmit()">
+  <div class="rrrr">
+      <fieldset><legend>Register</legend>
+        <br>
+    <label>Name:</label><br>
+    <input type="text" placeholder="Name" formControlName="uname" />
+    <span *ngIf="registerForm.get('uname').touched && !registerForm.get('uname').valid"> Enter a valid username (6-10) characters length.</span>
+    <br><br><label>Email:</label><br>
+<input type="email" placeholder="email" formControlName="email"/>
+<span *ngIf="!registerForm.get('email').valid && registerForm.get('email').touched">Enter a valid email</span>
+<br><br><label>Password:</label><br>
+<input type="password" placeholder="password" formControlName="password"/>
+<span *ngIf="!registerForm.get('password').valid && registerForm.get('password').touched">Enter a valid password (8-15) characters length.</span>
+<br><br><label>Confirm Password:</label><br>
+<input type="password" placeholder=" confirm password" formControlName="reenterpwd"/>
+<span *ngIf="!registerForm.get('reenterpwd').valid && registerForm.get('reenterpwd').touched">Enter a valid password (8-15) characters length.</span>
+<br>
+<br>
+
+ <button type="submit" [disabled]="!registerForm.valid">Register</button>
+</fieldset>  
+</div>
+</form>
+<router-outlet></router-outlet>
